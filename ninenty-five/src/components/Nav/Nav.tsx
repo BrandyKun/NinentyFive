@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { NavLink, Router } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 
 function Nav() {
   const [navBarOpen, setNavbarOpen] = useState(false);
@@ -17,19 +17,16 @@ function Nav() {
 
   return (
     <MenuBar>
-      <Router>
+   
       <nav className="navbar">
         <button onClick={handleToggle}>
           {navBarOpen ? "Close" : "Open"}{" "}
         </button>
         <ul className={`menuNav ${navBarOpen ? " showMenu" : ""}`}></ul>
-        <NavLink
-          to=""
-          className={({ isActive }) => isActive ? activeClassName : undefined }
-          onClick={() => closeMenu()}
-        ><p>something</p></NavLink>
+          
+        <p>something</p>
       </nav>
-      </Router>
+      
     </MenuBar>
   );
 }
