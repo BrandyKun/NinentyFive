@@ -7,17 +7,40 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    color: black;
+    scroll-behavior: smooth;
  }
- #root{
-     margin: 0 auto;
- }
+ :root{
+    --color-bg: #FF5757;
+    --color-bg-variant: #181818;
+    --color-primary: #FFFFFF;
+    --color-primary-variant: #F2F2F2;
+    --color-white:#FFF;
+    --color-light: #c6c6c6;
+
+    --transition: all 400ms ease;
+
+    --container-width-lg:75%;
+    --container-width-md:86%;
+    --container-width-sm:90%;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
  .container{
-     height: 100vh;
      width: 100%;
-     background-color: blueviolet;
+     display: flex;
+     justify-items: center;
  }
  .navbar{
     position: relative;
+  }
+  .shop_page{
+    height: 100vh;
   }
   .navBar button{
     position: fixed;
@@ -48,7 +71,7 @@ a {
   display: block;
   padding: 10px 40px;
   text-decoration: none;
-  color: #3fffd2;
+  color: #000000;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -56,4 +79,22 @@ a {
 .menuNav li:first-child {
   margin-top: 7rem;
 }
+
+button{
+        width: 30%;
+        height:30%;
+        font-size:1rem;
+        background: var(--color-bg);
+        color: #FFFFFF;
+        border: none;
+        margin: 0.75rem 1rem 0.75rem 2rem;
+        border-radius: 25px;
+        border: 1px solid #FFF;
+        transition: var(--transition);
+        &:hover{
+          background: #FFFFFF;
+          border: 0.5px solid var(--color-bg);
+          color: var(--color-bg);
+        }
+      }
 `

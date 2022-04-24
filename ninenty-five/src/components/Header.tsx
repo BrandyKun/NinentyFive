@@ -8,7 +8,9 @@ import { getJSDocReadonlyTag } from "typescript";
 function Header() {
   return (
     <HeaderNavigation>
-      <IconContext.Provider value={{ color: "grey", className: "social-icons", size: "70px" }}>
+      <IconContext.Provider
+        value={{ color: "grey", className: "social-icons", size: "20px" }}
+      >
         <SocialHandles>
           <a href="http://" target="_blank" rel="noopener noreferrer">
             <BsWhatsapp />
@@ -23,6 +25,9 @@ function Header() {
             <ImYoutube2 />
           </a>
         </SocialHandles>
+        <div className="logo_container">
+
+        </div>
       </IconContext.Provider>
       <ContactInfo>
         <p>someEmail@gmail.com</p>
@@ -34,11 +39,29 @@ function Header() {
 export default Header;
 
 const HeaderNavigation = styled.div`
-  height: 10vh;
+  height: 5vh;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 1px solid #8080804b;
+
+  /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
+
+  @media (max-width: 1024px) {
+    a{
+      display: none;
+    }
+    p{
+      display: none
+    }
+  }
+
+  /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
+
+  @media (max-width: 600px) {
+    
+  }
 `;
 
 const SocialHandles = styled.div`
@@ -47,8 +70,7 @@ const SocialHandles = styled.div`
   width: 50%;
   align-items: center;
   a {
-    margin: 10px;
-    max-height: 70px;
+    padding-right: -5px;
   }
 `;
 
