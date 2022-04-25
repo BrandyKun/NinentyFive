@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Logo1 from "../assets/LogoNumber.png";
+import Logo1 from "../assets/main.jpeg";
 import Logo2 from "../assets/LogoWriting.png";
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
     <>
       <LandingPage>
         <div className="pic_container">
-          <img src={Logo2} alt="" />
+          <img src={Logo1} alt="" />
         </div>
         <Button>
           <a href="#shop">Shop Now</a>
@@ -32,14 +32,36 @@ export const LandingPage = styled.div`
     width: 90%;
     margin: 0 0 0 auto;
     background: white;
-    padding: 10px;
     box-shadow: -16px 9px 11px 7px rgba(0, 0, 0, 0.08);
     -webkit-box-shadow: -16px 9px 11px 7px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: -16px 9px 11px 7px rgba(0, 0, 0, 0.08);
     img {
-      width: auto;
-      height: 50%;
-      background-size: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
+
+  @media (max-width: 1024px) {
+    padding-top: 2rem;
+    height: auto;
+    .pic_container{
+      width: 100%;
+      height: 80vh;
+      box-shadow: none;
+    }
+    
+  }
+
+  /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
+
+  @media (max-width: 600px) {
+    padding-top: 2rem;
+    .pic_container{
+      width: 100%;
+      height: 50vh;
+      box-shadow: none;
     }
   }
 `;
@@ -50,7 +72,20 @@ const Button = styled.button`
   left: 3rem;
   top: 20.25rem;
   position: absolute;
-  background: var(--color-bg);
+  /* background: var(--color-bg); */
+  background-image: linear-gradient(to right, var(--color-bg) 0%, #ff0000 51%, #fb2a7a 100%);
   border: none;
   border-radius: 25px;
+
+  /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
+
+  @media (max-width: 600px) {
+    
+  }
 `;

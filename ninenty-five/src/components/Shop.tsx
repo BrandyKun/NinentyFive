@@ -1,14 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Stock1 from '../assets/stock1.jpeg'
-import Stock2 from '../assets/stock2.jpeg'
-import Stock3 from '../assets/stock3.jpeg'
-import Stock4 from '../assets/stock4.jpeg'
-import Stock5 from '../assets/stock5.jpeg'
-import Stock6 from '../assets/stock6.jpeg'
-import Stock7 from '../assets/stock7.jpeg'
-import Stock8 from '../assets/stock8.jpeg'
-import Stock9 from '../assets/stock9.jpeg'
+import Stock1 from "../assets/stock1.jpeg";
+import Stock2 from "../assets/stock2.jpeg";
+import Stock3 from "../assets/stock3.jpeg";
+import Stock4 from "../assets/stock4.jpeg";
+import Stock5 from "../assets/stock5.jpeg";
+import Stock6 from "../assets/stock6.jpeg";
+import Stock7 from "../assets/stock7.jpeg";
+import Stock8 from "../assets/stock8.jpeg";
+import Stock9 from "../assets/stock9.jpeg";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
@@ -16,6 +16,7 @@ import "swiper/css";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import styled from "styled-components";
+import MobileShop from "./MobileShop";
 
 function Shop() {
   return (
@@ -137,6 +138,7 @@ function Shop() {
             </SwiperSlide>
           </Swiper>
         </CarousellContainer>
+        <MobileShop />
       </div>
     </>
   );
@@ -162,8 +164,8 @@ const CarousellContainer = styled.div`
     background: var(--color-bg);
 
     border-radius: 45px;
-    &:hover{
-      background: #FFFFFF;
+    &:hover {
+      background: #ffffff;
       transition: var(--transition);
 
       .swiper-slide {
@@ -171,7 +173,8 @@ const CarousellContainer = styled.div`
       }
     }
   }
-  .swiper-button-next::after, .swiper-button-prev::after{
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
     color: #000;
     font-size: 1.5rem;
   }
@@ -180,7 +183,7 @@ const CarousellContainer = styled.div`
     padding: 1.3rem;
     text-align: center;
     font-size: 18px;
-    background: #FFF;
+    background: #fff;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -195,26 +198,24 @@ const CarousellContainer = styled.div`
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     border-radius: 25px;
-    
-   
-    &:hover::after{
-    transform: translate(0, 0);
+
+    &:hover::after {
+      transform: translate(0, 0);
     }
-    
-    &:hover{
-    border: 2px solid transparent;
-    background-color: var(--color-bg);
-    transform: scale(1);
-    will-change: transform;
-    
-  }
-    .prod_img_container{
+
+    &:hover {
+      border: 2px solid transparent;
+      background-color: var(--color-bg);
+      transform: scale(1);
+      will-change: transform;
+    }
+    .prod_img_container {
       width: 100%;
-      height:100%;
+      height: 100%;
     }
-    .prod_description{
+    .prod_description {
       width: 100%;
       height: 30%;
       /* display: grid;
@@ -224,10 +225,9 @@ const CarousellContainer = styled.div`
       "nav nav"; */
       flex-direction: column;
       justify-content: space-around;
-      h3{
+      h3 {
         margin: 0.2rem 0;
       }
-      
     }
   }
 
@@ -237,5 +237,17 @@ const CarousellContainer = styled.div`
     height: 70%;
     object-fit: cover;
     border-radius: 25px;
+  }
+
+  /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
+
+  @media (max-width: 600px) {
+    display: none;
   }
 `;

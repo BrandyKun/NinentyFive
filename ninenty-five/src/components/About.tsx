@@ -36,6 +36,22 @@ const AboutContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
+
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "."
+      ".";
+  }
+
+  /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
+
+  @media (max-width: 600px) {
+  }
 `;
 
 const PhotoContainer = styled.div`
@@ -65,13 +81,24 @@ const PhotoContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding-left: 10rem;
-   h1{
-     border-bottom: 2px solid red;
-     border-width: 100%;
-     margin-bottom: 2rem;
-   }
+    h1 {
+      border-bottom: 2px solid red;
+      border-width: 100%;
+      margin-bottom: 2rem;
+    }
     p {
       font-size: 1.2rem;
+    }
+    /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      /* grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0px 0px;
+      grid-template-areas:
+        "."
+        "."; */
     }
   }
 `;

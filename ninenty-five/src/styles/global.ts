@@ -71,7 +71,7 @@ a {
   display: block;
   padding: 10px 40px;
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -91,10 +91,10 @@ button{
         border-radius: 25px;
         border: 1px solid #FFF;
         transition: var(--transition);
-        &:hover{
+        /* &:hover{
           background: #FFFFFF;
           border: 0.5px solid var(--color-bg);
           color: var(--color-bg);
-        }
+        } */
       }
 `
