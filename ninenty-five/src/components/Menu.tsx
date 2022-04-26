@@ -42,6 +42,8 @@ const StyledMenu = styled.nav<{ open: boolean }>`
 
   @media (max-width: 600px) {
     width: 100vw;
+    height: 100%;
+    z-index: 2;
   }
 `;
 

@@ -37,6 +37,7 @@ const StyledHamburger = styled.button<{ open: boolean }>`
   @media (max-width: 600px) {
     left: ${({ open }) => (open ? "initial" : "3vw")};
     right: ${({ open }) => (open ? "90vw" : "initial")};
+    z-index: 2;
   }
 
   div {

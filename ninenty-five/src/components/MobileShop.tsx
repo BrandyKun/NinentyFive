@@ -164,15 +164,15 @@ const ShopButton = styled.div`
 
 const ShopContainer = styled.div`
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
-
+display: none;
   @media (max-width: 1024px) {
     width: 100vw;
-    height: 40%;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
-    z-index: 1;
+    z-index: 0;
     .swiper-slide {
       padding: 2rem;
       text-align: center;

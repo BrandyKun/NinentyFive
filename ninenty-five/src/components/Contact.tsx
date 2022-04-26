@@ -207,6 +207,7 @@ const ContactContainer = styled.div`
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
 
   @media (max-width: 1024px) {
+    width: 100vw;
     .form_container.contact__container {
       grid-template-columns: 1fr;
       gap: 2rem;
