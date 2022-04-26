@@ -7,6 +7,7 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     color: black;
     scroll-behavior: smooth;
  }
@@ -23,6 +24,8 @@ export default createGlobalStyle`
     --container-width-lg:75%;
     --container-width-md:86%;
     --container-width-sm:90%;
+
+    --text-font: "font-family: 'Open Sans', sans-serif";
 }
 html{
     scroll-behavior: smooth;

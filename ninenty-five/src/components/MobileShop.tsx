@@ -144,9 +144,10 @@ const ShopButton = styled.div`
 
   @media (max-width: 1024px) {
     width: 100%;
-    height: 40%;
+    height: 30%;
     background-color: var(--color-bg);
     align-items: center;
+    justify-content: center;
     display: flex;
     button {
       border-radius: 10px;
