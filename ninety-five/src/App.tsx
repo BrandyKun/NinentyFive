@@ -8,6 +8,8 @@ import Home from './components/Home';
 import Nav from './components/Nav';
 import Shop from './components/Shop';
 import GlobalCss from './styles/global'
+import "swiper/css/bundle";
+
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -20,7 +22,7 @@ function App() {
       <Home />
       <Shop />
       <About />
-      <Contact />
+      {/* <Contact /> */}
       <Footer/>
     </>
   );

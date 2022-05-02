@@ -1,41 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import { BsWhatsapp, BsFacebook, BsInstagram } from "react-icons/bs";
-import { ImYoutube2 } from "react-icons/im";
-import { IconContext } from "react-icons";
+import { FiSearch, FiShoppingBag } from "react-icons/fi";
+import { FaRegUser } from "react-icons/fa";
+import { AiOutlineHeart } from "react-icons/ai";
 import logo from "../assets/LogoNumber.png";
-import logo1 from "../assets/logoNew.jpeg";
+import logo1 from "../assets/Asset 1.svg";
+import Menu from "./Menu";
 
 function Header() {
-  return (
-    <HeaderNavigation>
-      <IconContext.Provider
-        value={{ color: "grey", className: "social-icons", size: "20px" }}
-      >
-        <SocialHandles>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            <BsWhatsapp />
-          </a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            <BsFacebook />
-          </a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            <BsInstagram />
-          </a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            <ImYoutube2 />
-          </a>
-        </SocialHandles>
+  return (<div className="contenitore">
+    
+      <HeaderNavigation>
+        <Menu />
         <LogoContainer>
           <div className="logo_container">
             <img src={logo1} alt="" />
           </div>
         </LogoContainer>
-      </IconContext.Provider>
-      <ContactInfo>
-        <p>someEmail@gmail.com</p>
-      </ContactInfo>
-    </HeaderNavigation>
+        <ContactInfo>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <FaRegUser />
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <AiOutlineHeart />
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <FiShoppingBag />
+          </a>
+        </ContactInfo>
+      </HeaderNavigation>
+  </div>
   );
 }
 
@@ -47,22 +41,29 @@ const HeaderNavigation = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #8080804b;
+  border-bottom: 1px solid #F5F5F5;
+  background-color: var(--color-white);
+  
+
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
 
   @media (max-width: 1024px) {
-      border-bottom: none;
-      position: sticky;
-    }
-    /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
+    border-bottom: none;
+  }
+  /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
 
   @media (max-width: 600px) {
-   position: sticky;
   }
 `;
 
 const LogoContainer = styled.div`
-  display: none;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 3vh;
+  }
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
 
   @media (max-width: 1024px) {
@@ -71,8 +72,7 @@ const LogoContainer = styled.div`
     height: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
-    img{
+    img {
       height: 3vh;
     }
   }
@@ -82,7 +82,7 @@ const LogoContainer = styled.div`
   @media (max-width: 600px) {
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 `;
 
@@ -111,11 +111,20 @@ const SocialHandles = styled.div`
 const ContactInfo = styled.div`
   display: flex;
   height: 100%;
-  width: 50%;
   align-items: center;
   justify-content: flex-end;
   padding-right: 20px;
   font-size: 20px;
+  width: 9%;
+  display: grid;
+  align-items: center;
+  gap: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  a {
+    color: var(--color-bg);
+    font-size: 1.5rem;
+    padding: 0;
+  }
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
 
   @media (max-width: 1024px) {

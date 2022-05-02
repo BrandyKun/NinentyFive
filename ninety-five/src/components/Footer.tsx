@@ -3,14 +3,15 @@ import styled from "styled-components";
 import {FaFacebookF, FaLinkedin} from 'react-icons/fa'
 import {FiInstagram} from 'react-icons/fi'
 import { ImYoutube2 } from "react-icons/im";
+// import logoWhite from '../assets/'
 
 function Footer() {
   return (
     <FooterContainer>
       <footer>
         <a href="#" className="footer__logo">
-          {" "}
-          NinentyFive
+          NinetyFive
+          {/* <img src={} alt="" /> */}
         </a>
 
         <ul>

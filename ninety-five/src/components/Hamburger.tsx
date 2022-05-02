@@ -17,9 +17,8 @@ const Hamburger = (props: Props) => (
 export default Hamburger;
 
 const StyledHamburger = styled.button<{ open: boolean }>`
-  position: fixed;
+  position: relative;
   left: ${({ open }) => (open ? "29vw" : "3vw")};
-  top: 3vw;
   width: 2rem;
   height: 2rem;
   padding: 0;
@@ -34,11 +33,7 @@ const StyledHamburger = styled.button<{ open: boolean }>`
   outline: none;
   z-index: 1;
 
-  @media (max-width: 600px) {
-    left: ${({ open }) => (open ? "initial" : "3vw")};
-    right: ${({ open }) => (open ? "90vw" : "initial")};
-    z-index: 2;
-  }
+ 
 
   div {
     position: relative;
@@ -62,5 +57,11 @@ const StyledHamburger = styled.button<{ open: boolean }>`
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
+  }
+
+  @media (max-width: 600px) {
+    left: ${({ open }) => (open ? "initial" : "3vw")};
+    right: ${({ open }) => (open ? "-80vw" : "initial")};
+    z-index: 2;
   }
 `;

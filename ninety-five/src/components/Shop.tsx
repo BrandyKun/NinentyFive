@@ -21,124 +21,19 @@ import MobileShop from "./MobileShop";
 function Shop() {
   return (
     <>
+      <div className="title">
+        <h1>Browes Categories</h1>
+      </div>
+
       <div className="container shop_page" id="shop">
+
         <CarousellContainer>
-          <h1>New Arrivals</h1>
-          <Swiper
-            cssMode={true}
-            navigation={true}
-            mousewheel={true}
-            keyboard={true}
-            slidesPerView={3}
-            spaceBetween={30}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <div className="prod_img_container">
-                <img src={Stock1} alt="" className="prod_img" />
-                <div className="prod_description">
-                  <h3>Product Title</h3>
-                  <p>some info</p>
-                  <button>View</button>
-                  <button>Shop</button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="prod_img_container">
-                <img src={Stock2} alt="" className="prod_img" />
-                <div className="prod_description">
-                  <h3>Product Title</h3>
-                  <p>some info</p>
-                  <button>View</button>
-                  <button>Shop</button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="prod_img_container">
-                <img src={Stock3} alt="" className="prod_img" />
-                <div className="prod_description">
-                  <h3>Product Title</h3>
-                  <p>some info</p>
-                  <button>View</button>
-                  <button>Shop</button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="prod_img_container">
-                <img src={Stock4} alt="" className="prod_img" />
-                <div className="prod_description">
-                  <h3>Product Title</h3>
-                  <p>some info</p>
-                  <button>View</button>
-                  <button>Shop</button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="prod_img_container">
-                <img src={Stock5} alt="" className="prod_img" />
-                <div className="prod_description">
-                  <h3>Product Title</h3>
-                  <p>some info</p>
-                  <button>View</button>
-                  <button>Shop</button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="prod_img_container">
-                <img src={Stock6} alt="" className="prod_img" />
-                <div className="prod_description">
-                  <h3>Product Title</h3>
-                  <p>some info</p>
-                  <button>View</button>
-                  <button>Shop</button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="prod_img_container">
-                <img src={Stock7} alt="" className="prod_img" />
-                <div className="prod_description">
-                  <h3>Product Title</h3>
-                  <p>some info</p>
-                  <button>View</button>
-                  <button>Shop</button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="prod_img_container">
-                <img src={Stock8} alt="" className="prod_img" />
-                <div className="prod_description">
-                  <h3>Product Title</h3>
-                  <p>some info</p>
-                  <button>View</button>
-                  <button>Shop</button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="prod_img_container">
-                <img src={Stock9} alt="" className="prod_img" />
-                <div className="prod_description">
-                  <h3>Product Title</h3>
-                  <p>some info</p>
-                  <button>View</button>
-                  <button>Shop</button>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+          <div className="prod_category"><a href=""><img src={Stock1} alt="" /></a><h2>Product</h2></div>
+          <div className="prod_category"><a href=""><img src={Stock2} alt="" /></a><h2>Product</h2></div>
+          <div className="prod_category"><a href=""><img src={Stock3} alt="" /></a><h2>Product</h2></div>
+          <div className="prod_category"><a href=""><img src={Stock4} alt="" /></a><h2>Product</h2></div>
         </CarousellContainer>
-        <MobileShop />
+        {/* <MobileShop /> */}
       </div>
     </>
   );
@@ -147,107 +42,48 @@ function Shop() {
 export default Shop;
 
 const CarousellContainer = styled.div`
-  width: 90%;
+  width: 80%;
   height: 90%;
-  margin: auto;
+  display: grid;
+  margin: 0 auto 0 auto;
+  grid-template-columns:repeat(4,1fr);
+  grid-gap: 0.75rem;
   h1 {
     width: 100%;
     margin: 2rem auto;
     display: flex;
     justify-content: center;
   }
-  .swiper {
+  .prod_category{
     width: 100%;
-    height: 60%;
-    padding: 2rem;
-    border: 1px solid var(--color-bg);
-    background: var(--color-bg);
-
-    border-radius: 45px;
-    &:hover {
-      background: #ffffff;
-      transition: var(--transition);
-
-      .swiper-slide {
-        border: 1px solid var(--color-bg);
-      }
-    }
-  }
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    color: #000;
-    font-size: 1.5rem;
-  }
-
-  .swiper-slide {
-    padding: 1.3rem;
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+    height: 100%;
+    max-height: 50vh;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
+    flex-direction: column;
     align-items: center;
-    border: 1px solid #fff;
-    border-radius: 25px;
-
-    &:hover::after {
-      transform: translate(0, 0);
+    a{
+      width: 100%;
+      height: 80%;
+      padding: 0;
     }
-
-    &:hover {
-      border: 2px solid transparent;
-      background-color: var(--color-bg);
-      transform: scale(1);
-      will-change: transform;
-    }
-    .prod_img_container {
+    img{
       width: 100%;
       height: 100%;
+      object-fit: cover ;
     }
-    .prod_description {
-      width: 100%;
-      height: 30%;
-      /* display: grid;
-      grid-template-columns: 1fr 2fr;
-      grid-template-areas: 
-      "title title"
-      "nav nav"; */
-      flex-direction: column;
-      justify-content: space-around;
-      h3 {
-        margin: 0.2rem 0;
-      }
+    h2{
+      color:var(--color-bg)
     }
   }
-
-  .swiper-slide img {
-    display: flex;
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    border-radius: 25px;
-  }
-
+  
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
 
   @media (max-width: 1024px) {
-    display: none;
+    grid-template-columns:repeat(1,1fr);
   }
 
   /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
 
   @media (max-width: 600px) {
-    display: none;
   }
 `;

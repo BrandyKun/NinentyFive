@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import Logo1 from "../assets/main.jpeg";
-import Logo2 from "../assets/LogoWriting.png";
+import HomeCarousel from "./HomeCarousel";
 
 function Home() {
   return (
     <>
       <LandingPage>
-        <div className="pic_container">
+        {/* <div className="pic_container">
           <img src={Logo1} alt="" />
         </div>
         <Button>
           <a href="#shop">Shop Now</a>
-        </Button>
+        </Button> */}
+        <HomeCarousel />
       </LandingPage>
     </>
   );

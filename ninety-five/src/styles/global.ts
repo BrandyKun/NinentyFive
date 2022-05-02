@@ -7,7 +7,7 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 800;
     color: black;
     scroll-behavior: smooth;
  }
@@ -100,4 +100,18 @@ button{
           color: var(--color-bg);
         } */
       }
+
+  .contenitore
+  {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+  }
+
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
 `
