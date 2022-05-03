@@ -80,10 +80,13 @@ const CarousellContainer = styled.div`
 
   @media (max-width: 1024px) {
     grid-template-columns:repeat(1,1fr);
+    
   }
 
   /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
 
   @media (max-width: 600px) {
+    height: 100%;
+
   }
 `;

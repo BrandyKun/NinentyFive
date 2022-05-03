@@ -35,8 +35,10 @@ export default Nav;
 
 export const MenuBar = styled.div`
   background-color: #f5f5f5;
-  height: 4vh;
-  width: 100%;
+  height: 100%;
+  max-height: 8vh;
+  width: auto;
+  white-space: nowrap;
   margin-bottom: 1rem;
   nav {
     width: 100%;
@@ -45,26 +47,31 @@ export const MenuBar = styled.div`
     justify-content: space-evenly;
     flex-direction: row;
 
-    ul li{
+    ul li {
       list-style: none;
       display: inline-block;
 
-      a{
+      a {
         color: black;
       }
     }
   }
- 
 
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
 
   @media (max-width: 1024px) {
-    display: none;
+    overflow-x: scroll;
+    width: 100vw;
+    ::before {
+      margin-top: auto; /*  added  */
+    }
+    ::after {
+      margin-bottom: auto; /*  added  */
+    }
   }
 
   /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
 
   @media (max-width: 600px) {
-    display: none;
   }
 `;

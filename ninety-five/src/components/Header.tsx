@@ -36,11 +36,13 @@ function Header() {
 export default Header;
 
 const HeaderNavigation = styled.div`
-  height: 5vh;
+  height:100%;
+  max-height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #F5F5F5;
   background-color: var(--color-white);
   
@@ -59,7 +61,7 @@ const HeaderNavigation = styled.div`
 const LogoContainer = styled.div`
   display: flex;
   height: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   img {
     height: 3vh;
@@ -86,34 +88,11 @@ const LogoContainer = styled.div`
   }
 `;
 
-const SocialHandles = styled.div`
-  display: flex;
-  height: 100%;
-  width: 50%;
-  align-items: center;
-  a {
-    padding-right: -5px;
-  }
-
-  /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
-
-  @media (max-width: 1024px) {
-    display: none;
-  }
-
-  /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
-
-  @media (max-width: 600px) {
-    display: none;
-  }
-`;
-
 const ContactInfo = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 20px;
   font-size: 20px;
   width: 9%;
   display: grid;
@@ -128,12 +107,10 @@ const ContactInfo = styled.div`
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
 
   @media (max-width: 1024px) {
-    display: none;
   }
 
   /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
 
   @media (max-width: 600px) {
-    display: none;
   }
 `;

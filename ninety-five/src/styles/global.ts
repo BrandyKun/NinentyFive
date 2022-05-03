@@ -43,7 +43,7 @@ html{
     position: relative;
   }
   .shop_page{
-    height: 100vh;
+    height: 100%;
   }
   .navBar button{
     position: fixed;

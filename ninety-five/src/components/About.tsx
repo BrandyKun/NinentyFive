@@ -40,7 +40,7 @@ const AboutContainer = styled.div`
   .info_box {
     width: 45%;
     background-color: #ffffff;
-    height: 40%;
+    height: 50%;
     z-index: 1;
     right: 150px;
     position: absolute;
@@ -52,10 +52,11 @@ const AboutContainer = styled.div`
     h1 {
       border-bottom: 2px solid red;
       border-width: 100%;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-weight: 200;
     }
   }
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
@@ -79,6 +80,7 @@ const AboutContainer = styled.div`
       }
       p{
         font-size: 1rem;
+        font-weight: 300;
       }
     }
   }
@@ -103,9 +105,10 @@ const PhotoContainer = styled.div`
   align-items: center;
   img {
     width: 50%;
-    max-height: 50%;
+    max-height: 80vh;
     left: 24px;
     position: absolute;
+    object-fit: cover;
   }
 
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
