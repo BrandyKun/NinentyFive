@@ -70,6 +70,11 @@ const SwiperCarousel = styled.div`
     align-items: center;
   }
 
+  .kyULqk .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .kyULqk .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active
+  {
+    color: var(--color-bg);
+  }
+
   .swiper-slide img {
     display: block;
     width: 100%;
