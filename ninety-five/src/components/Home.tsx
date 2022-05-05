@@ -22,7 +22,7 @@ function Home() {
 export default Home;
 
 export const LandingPage = styled.div`
-  height: 91vh;
+  height: 100%;
   width: 100%;
   position: relative;
   .pic_container {
@@ -58,35 +58,11 @@ export const LandingPage = styled.div`
   /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
 
   @media (max-width: 600px) {
-    padding-top: 2rem;
+    height: 100%;
     .pic_container{
       width: 100%;
       height: 50vh;
       box-shadow: none;
     }
-  }
-`;
-
-const Button = styled.button`
-  width: 15%;
-  height: 100px;
-  left: 3rem;
-  top: 20.25rem;
-  position: absolute;
-  /* background: var(--color-bg); */
-  background-image: linear-gradient(to right, var(--color-bg) 0%, #ff0000 51%, #fb2a7a 100%);
-  border: none;
-  border-radius: 25px;
-
-  /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
-
-  @media (max-width: 1024px) {
-    display: none;
-  }
-
-  /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
-
-  @media (max-width: 600px) {
-    
   }
 `;

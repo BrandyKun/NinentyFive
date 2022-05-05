@@ -5,8 +5,6 @@ import { AiOutlineHeart } from "react-icons/ai";
 import Menu from "./Menu";
 
 function Nav() {
-  let activeClassName = "underline";
-
   return (
     <>
       <MenuBar>
@@ -46,13 +44,18 @@ export const MenuBar = styled.div`
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    display: sticky;
 
-    ul li {
-      list-style: none;
-      display: inline-block;
+    ul {
+      overflow: auto;
+      display: inline-flexbox;
+      li {
+        list-style: none;
+        white-space: nowrap;
 
-      a {
-        color: black;
+        a {
+          color: black;
+        }
       }
     }
   }
@@ -67,6 +70,11 @@ export const MenuBar = styled.div`
     }
     ::after {
       margin-bottom: auto; /*  added  */
+    }
+
+    a {
+      font-size: 0.75rem;
+      margin: 0;
     }
   }
 

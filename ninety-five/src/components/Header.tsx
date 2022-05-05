@@ -6,9 +6,10 @@ import { AiOutlineHeart } from "react-icons/ai";
 import logo from "../assets/LogoNumber.png";
 import logo1 from "../assets/Asset 1.svg";
 import Menu from "./Menu";
+import {User} from '@styled-icons/boxicons-regular/User'
 
 function Header() {
-  return (<div className="contenitore">
+  return (
     
       <HeaderNavigation>
         <Menu />
@@ -23,13 +24,13 @@ function Header() {
           </a>
           <a href="http://" target="_blank" rel="noopener noreferrer">
             <AiOutlineHeart />
+        <i data-feather="heart"></i>
           </a>
           <a href="http://" target="_blank" rel="noopener noreferrer">
             <FiShoppingBag />
           </a>
         </ContactInfo>
       </HeaderNavigation>
-  </div>
   );
 }
 
@@ -45,6 +46,8 @@ const HeaderNavigation = styled.div`
   align-items: center;
   border-bottom: 1px solid #F5F5F5;
   background-color: var(--color-white);
+  margin-top:10px;
+  padding: 0.25rem;
   
 
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
@@ -103,6 +106,10 @@ const ContactInfo = styled.div`
     color: var(--color-bg);
     font-size: 1.5rem;
     padding: 0;
+
+    svg{
+      stroke: black;
+    }
   }
   /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
 

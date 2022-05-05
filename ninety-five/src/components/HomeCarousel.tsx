@@ -1,10 +1,16 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
+import pic1 from "../assets/pic1.jpeg";
+import pic2 from "../assets/pic2.jpeg";
+import pic3 from "../assets/pic3.jpeg";
+import pic4 from "../assets/pic4.jpeg";
+import pic5 from "../assets/pic5.jpeg";
+import pic6 from "../assets/pic6.jpeg";
 
 import "swiper/css";
 // import required modules
-import { Autoplay,  Pagination, Mousewheel, Keyboard } from "swiper";
+import { Autoplay, Pagination, Mousewheel, Keyboard } from "swiper";
 import styled from "styled-components";
 
 function HomeCarousel() {
@@ -21,18 +27,15 @@ function HomeCarousel() {
           pagination={{
             clickable: true,
           }}
-          modules={[Autoplay, Pagination, ]}
+          modules={[Autoplay, Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide><img src={pic1} alt="" /></SwiperSlide>
+          <SwiperSlide><img src={pic2} alt="" /></SwiperSlide>
+          <SwiperSlide><img src={pic3}alt="" /></SwiperSlide>
+          <SwiperSlide><img src={pic4} alt="" /></SwiperSlide>
+          <SwiperSlide><img src={pic5} alt="" /></SwiperSlide>
+          <SwiperSlide><img src={pic6} alt="" /></SwiperSlide>
         </Swiper>
       </SwiperCarousel>
     </>
@@ -72,5 +75,19 @@ const SwiperCarousel = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  /* ===================== MEDIA QUERIES ( MEDIA DEVICES) ================= */
+
+  @media (max-width: 1024px) {
+    .swiper {
+      width: 100%;
+      height: 50vh;
+    }
+  }
+
+  /* ===================== MEDIA QUERIES ( SMALL DEVICES) ================= */
+
+  @media (max-width: 600px) {
   }
 `;

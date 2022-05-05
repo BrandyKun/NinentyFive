@@ -23,6 +23,7 @@ const StyledHamburger = styled.button<{ open: boolean }>`
   height: 2rem;
   padding: 0;
   background: transparent;
+  margin: 0;
 
   display: flex;
   flex-direction: column;
@@ -38,7 +39,7 @@ const StyledHamburger = styled.button<{ open: boolean }>`
   div {
     position: relative;
     width: 2rem;
-    height: 0.25rem;
+    height: 0.15rem;
     border-radius: 10px;
     transition: all 0.3s linear;
     transform-origin: 1px;
@@ -63,5 +64,9 @@ const StyledHamburger = styled.button<{ open: boolean }>`
     left: ${({ open }) => (open ? "initial" : "3vw")};
     right: ${({ open }) => (open ? "-80vw" : "initial")};
     z-index: 2;
+
+    div{
+      position: sticky;
+    }
   }
 `;

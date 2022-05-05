@@ -26,6 +26,7 @@ export default createGlobalStyle`
     --container-width-sm:90%;
 
     --text-font: "font-family: 'Open Sans', sans-serif";
+    --font-bold: 800;
 }
 html{
     scroll-behavior: smooth;
@@ -113,5 +114,13 @@ button{
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    height: 50px;
+    background-color: var(--color-bg);
+    margin-bottom: 1rem;
+
+    h1{
+      color: white;
+      font-weight: 300;
+    }
   }
 `
